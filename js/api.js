@@ -5,7 +5,7 @@
    2) Open-Meteo      -> clima actual para visitas a domicilio
    ============================================================ */
 
-const URL_PAISES = "https://countries.dev/countries";
+const URL_PAISES = "https://countries.dev/countries?fields=name,alpha2Code,flag&sort=name";
 
 // Trae la lista completa de países (nombre + bandera)
 async function obtenerPaises() {

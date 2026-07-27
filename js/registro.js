@@ -65,11 +65,13 @@ function renderizarListaPaises(paises) {
 
   let html = "";
   paises.slice(0, 30).forEach(function (pais) {
-    const nombre = pais.name && pais.name.common ? pais.name.common : pais.nombre || "Desconocido";
-    const bandera = pais.flags && pais.flags.png ? pais.flags.png : pais.bandera || "";
+    // countries.dev devuelve el nombre como texto simple (pais.name)
+    // y la bandera como emoji (pais.flag), no como URL de imagen.
+    const nombre = pais.name || "Desconocido";
+    const bandera = pais.flag || "";
     html +=
       '<li class="opcion-pais" data-nombre="' + nombre + '">' +
-      (bandera ? '<img src="' + bandera + '" alt="Bandera de ' + nombre + '">' : "") +
+      (bandera ? '<span class="bandera-emoji">' + bandera + "</span> " : "") +
       "<span>" + nombre + "</span>" +
       "</li>";
   });
@@ -97,7 +99,7 @@ function filtrarPaises(texto) {
   }
 
   const coincidencias = listaPaises.filter(function (pais) {
-    const nombre = pais.name && pais.name.common ? pais.name.common : pais.nombre || "";
+    const nombre = pais.name || "";
     return nombre.toLowerCase().includes(textoBusqueda);
   });
 
