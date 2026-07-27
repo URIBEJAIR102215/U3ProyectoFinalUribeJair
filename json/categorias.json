@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nombre": "Perro",
+    "descripcion": "Caninos de todas las razas y tamaños.",
+    "icono": "fa-solid fa-dog",
+    "imagen": "assets/img/especies/perro.svg"
+  },
+  {
+    "id": 2,
+    "nombre": "Gato",
+    "descripcion": "Felinos domésticos de interior o exterior.",
+    "icono": "fa-solid fa-cat",
+    "imagen": "assets/img/especies/gato.svg"
+  },
+  {
+    "id": 3,
+    "nombre": "Ave",
+    "descripcion": "Aves ornamentales o de compañía.",
+    "icono": "fa-solid fa-dove",
+    "imagen": "assets/img/especies/ave.svg"
+  },
+  {
+    "id": 4,
+    "nombre": "Conejo",
+    "descripcion": "Conejos domésticos de distintas razas.",
+    "icono": "fa-solid fa-carrot",
+    "imagen": "assets/img/especies/conejo.svg"
+  },
+  {
+    "id": 5,
+    "nombre": "Otro",
+    "descripcion": "Roedores, reptiles u otras especies de compañía.",
+    "icono": "fa-solid fa-paw",
+    "imagen": "assets/img/especies/otro.svg"
+  }
+]

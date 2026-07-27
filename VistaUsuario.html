@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPals - Mi Panel</title>
+    <link rel="icon" href="img/salud.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/Usuario.css">
+    <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-paw"></i> PetPals</h1>
+        <p>Panel del Dueño de Mascota</p>
+    </header>
+
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <a href="#mis-mascotas"><i class="fa-solid fa-dog"></i> Mis Mascotas</a>
+                <a href="#registro-mascota"><i class="fa-solid fa-square-plus"></i> Registrar Mascota</a>
+                <a href="#citas"><i class="fa-solid fa-calendar-check"></i> Citas</a>
+                <a href="LoginUribe.html"><i class="fa-solid fa-power-off"></i> Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- SECCIÓN BIENVENIDA -->
+        <section id="bienvenida">
+            <h2><i class="fa-solid fa-hand-wave"></i> ¡Hola!</h2>
+            <p>Bienvenido de vuelta a tu panel. Aquí puedes gestionar todas tus mascotas: buscarlas, filtrarlas,
+            registrar nuevas, editarlas o eliminarlas. La información se guarda en tu navegador.</p>
+        </section>
+
+        <p id="aviso-carga"><i class="fa-solid fa-spinner fa-spin"></i> Cargando información de las mascotas...</p>
+
+        <!-- PANEL DE INDICADORES -->
+        <section id="indicadores" aria-label="Indicadores generales">
+            <h2><i class="fa-solid fa-chart-simple"></i> Resumen General</h2>
+            <div class="panel-indicadores">
+                <div class="indicador-card">
+                    <span id="ind-total">0</span>
+                    <p>Mascotas registradas</p>
+                </div>
+                <div class="indicador-card">
+                    <span id="ind-saludables">0</span>
+                    <p>Saludables</p>
+                </div>
+                <div class="indicador-card">
+                    <span id="ind-urgentes">0</span>
+                    <p>Urgentes</p>
+                </div>
+                <div class="indicador-card">
+                    <span id="ind-promedio-edad">0</span>
+                    <p>Edad promedio (años)</p>
+                </div>
+                <div class="indicador-card">
+                    <span id="ind-promedio-costo">$0</span>
+                    <p>Consulta promedio</p>
+                </div>
+            </div>
+
+            <div class="contenedor-grafico">
+                <h3 style="color:#2e7d32; margin-bottom:10px;">Mascotas por especie</h3>
+                <canvas id="grafico-especies" aria-label="Gráfico de mascotas por especie" role="img"></canvas>
+            </div>
+        </section>
+
+        <!-- SECCIÓN MIS MASCOTAS — TARJETAS GENERADAS POR JAVASCRIPT -->
+        <section id="mis-mascotas">
+            <h2><i class="fa-solid fa-paw"></i> Mis Mascotas</h2>
+
+            <!-- Buscador + filtros + orden -->
+            <div class="barra-herramientas">
+                <div>
+                    <label for="buscador-mascota"><i class="fa-solid fa-magnifying-glass"></i> Buscar</label>
+                    <input type="text" id="buscador-mascota" placeholder="Nombre, raza o dueño...">
+                </div>
+                <div>
+                    <label for="filtro-especie"><i class="fa-solid fa-filter"></i> Especie</label>
+                    <select id="filtro-especie"></select>
+                </div>
+                <div>
+                    <label for="filtro-estado"><i class="fa-solid fa-filter"></i> Estado</label>
+                    <select id="filtro-estado">
+                        <option value="todos">Todos los estados</option>
+                        <option value="Saludable">Saludable</option>
+                        <option value="Vacunas Pendientes">Vacunas Pendientes</option>
+                        <option value="En revisión">En revisión</option>
+                        <option value="Urgente">Urgente</option>
+                        <option value="Tratamiento">Tratamiento</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="orden-mascotas"><i class="fa-solid fa-arrow-down-a-z"></i> Ordenar por</label>
+                    <select id="orden-mascotas">
+                        <option value="">Sin orden</option>
+                        <option value="nombre-asc">Nombre A - Z</option>
+                        <option value="nombre-desc">Nombre Z - A</option>
+                        <option value="edad-mayor">Edad: mayor a menor</option>
+                        <option value="edad-menor">Edad: menor a mayor</option>
+                        <option value="costo-mayor">Consulta: mayor a menor</option>
+                        <option value="costo-menor">Consulta: menor a mayor</option>
+                    </select>
+                </div>
+            </div>
+
+            <p>
+                <button type="button" id="btn-restablecer" class="btn-agendar secondary">
+                    <i class="fa-solid fa-rotate-left"></i> Restablecer datos originales
+                </button>
+            </p>
+
+            <!-- Contenedor flex: las tarjetas se ubican lado a lado -->
+            <div class="contenedor-tarjetas"></div>
+        </section>
+
+        <!-- SECCIÓN REGISTRO / EDICIÓN DE MASCOTA -->
+        <section id="registro-mascota">
+            <h2><i class="fa-solid fa-square-plus"></i> Registrar o Editar Mascota</h2>
+
+            <form id="formulario-mascota" class="formulario-mascota-grid">
+                <div class="form-group">
+                    <label for="mascota-nombre">Nombre:</label>
+                    <input type="text" id="mascota-nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mascota-especieId">Especie:</label>
+                    <select id="mascota-especieId" required></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mascota-raza">Raza:</label>
+                    <input type="text" id="mascota-raza" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mascota-edad">Edad (años):</label>
+                    <input type="number" id="mascota-edad" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mascota-dueño">Dueño:</label>
+                    <input type="text" id="mascota-dueño" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mascota-estado">Estado de salud:</label>
+                    <select id="mascota-estado" required>
+                        <option value="" disabled selected>Seleccione un estado</option>
+                        <option value="Saludable">Saludable</option>
+                        <option value="Vacunas Pendientes">Vacunas Pendientes</option>
+                        <option value="En revisión">En revisión</option>
+                        <option value="Urgente">Urgente</option>
+                        <option value="Tratamiento">Tratamiento</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mascota-fecha">Última visita:</label>
+                    <input type="date" id="mascota-fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mascota-costo">Costo de consulta ($):</label>
+                    <input type="number" id="mascota-costo" min="0" step="0.01" required>
+                </div>
+
+                <div class="campo-ancho" style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button type="submit" class="btn-agendar">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar Mascota
+                    </button>
+                    <button type="button" id="btn-cancelar-edicion" class="btn-agendar secondary" style="display:none;">
+                        <i class="fa-solid fa-xmark"></i> Cancelar edición
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- SECCIÓN CITAS — FORMULARIO EN GRID DE 2 COLUMNAS -->
+        <section id="citas">
+            <h2><i class="fa-solid fa-calendar-plus"></i> Agendar Nueva Cita</h2>
+
+            <form action="#" method="GET" class="formulario-citas">
+
+                <div class="form-group">
+                    <label for="mascota-cita">Selecciona tu mascota:</label>
+                    <select id="mascota-cita" name="mascota" required>
+                        <option value="" disabled selected>Selecciona una mascota</option>
+                        <option value="buddy">Buddy - Golden Retriever</option>
+                        <option value="luna">Luna - British Shorthair</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo-cita">Motivo de la consulta:</label>
+                    <select id="motivo-cita" name="motivo" required>
+                        <option value="" disabled selected>Selecciona el motivo</option>
+                        <option value="chequeo">Chequeo general</option>
+                        <option value="vacuna">Vacunación</option>
+                        <option value="cirugia">Cirugía</option>
+                        <option value="emergencia">Emergencia</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha-cita">Fecha de la cita:</label>
+                    <input type="date" id="fecha-cita" name="fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora-cita">Hora disponible:</label>
+                    <select id="hora-cita" name="hora" required>
+                        <option value="" disabled selected>Selecciona una hora</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="11:30">11:30 AM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="16:45">04:45 PM</option>
+                    </select>
+                </div>
+
+                <!-- Textarea ocupa las 2 columnas (campo-ancho) -->
+                <div class="form-group campo-ancho">
+                    <label for="notas-cita">Notas adicionales:</label>
+                    <textarea id="notas-cita" name="notas" rows="3" placeholder="Describe los síntomas u observaciones..."></textarea>
+                </div>
+
+                <!-- Botón ocupa las 2 columnas -->
+                <button type="submit" class="btn-agendar campo-ancho">
+                    <i class="fa-solid fa-square-check"></i> Confirmar Cita
+                </button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© PetPals 2026 - Proyecto Fundamentos Web</p>
+        <p>Universidad de las Fuerzas Armadas ESPE</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/componentes.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

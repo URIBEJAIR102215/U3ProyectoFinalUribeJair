@@ -1,0 +1,171 @@
+/* ============================================================
+   veterinario.css - PetPals
+   Estilos específicos del panel del veterinario.
+   Autor: Uribe Jair
+   ============================================================ */
+
+/* ============================================================
+   BLOQUE 1: PANEL PRINCIPAL DEL VETERINARIO
+   ============================================================ */
+#panel-veterinario {
+    background-color: #e3f2fd;
+    border-left: 6px solid #1565c0;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#panel-veterinario h2 {
+    color: #0b0b0b;
+}
+
+/* ============================================================
+   BLOQUE 2: ESTADÍSTICAS DEL DÍA — GRID DE TARJETAS
+   Cuatro tarjetas de resumen en una cuadrícula.
+   ============================================================ */
+.grid-estadisticas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+/* Tablet: dos tarjetas por fila */
+@media (min-width: 576px) {
+    .grid-estadisticas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Escritorio: las cuatro tarjetas en una sola fila division*/
+@media (min-width: 992px) {
+    .grid-estadisticas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid #bbdefb;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);/* sombra al pasar el mouse*/
+    box-sizing: border-box;
+}
+
+.stat-card .stat-numero {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.stat-card .stat-urgente {
+    color: #c62828;/* pinta cuando el numero es urgente*/
+}
+
+.stat-card p {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0;
+}
+
+/* ============================================================
+   BLOQUE 3: TARJETAS DE PACIENTE — FLEXBOX
+   Lista de pacientes con tarjetas distribuidas en flex.
+   ============================================================ */
+.contenedor-pacientes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.tarjeta-paciente {
+    flex: 1 1 280px;
+    border: 1px solid #bbdefb;
+    border-radius: 10px;
+    padding: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    box-sizing: border-box;
+    overflow-x: auto; /* Permite scroll interno si la tarjeta es muy pequeña */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-paciente:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    background-color: #f5f9ff;
+}
+
+.tarjeta-paciente h3 {
+    color: #060606;
+    margin-bottom: 10px;
+}
+
+/* ============================================================
+   BLOQUE 4: TABLA DE AGENDA DEL DÍA
+   ============================================================ */
+#agenda h2 {
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+.tabla-agenda {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-agenda th {
+    background-color: #425d7c;
+    color: #ffffff;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.tabla-agenda td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabla-agenda tr:hover td {
+    background-color: #e3f2fd;
+}
+
+/* ============================================================
+   BLOQUE 5: ESTADOS DE CITA
+   ============================================================ */
+.estado-confirmado {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.estado-pendiente {
+    color: #e65100;
+    font-weight: bold;
+}
+
+.estado-urgente {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* ============================================================
+   BLOQUE 6: MODAL DE EXPEDIENTE (Bootstrap)
+   ============================================================ */
+.modal-expediente .modal-header {
+    background-color: #1565c0;
+    color: #ffffff;
+    border-bottom: none;
+}
+
+.modal-expediente .modal-header .btn-close {
+    filter: invert(1) brightness(2);
+}
+
+.modal-expediente .modal-title {
+    font-weight: 600;
+}

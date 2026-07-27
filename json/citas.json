@@ -1,0 +1,632 @@
+[
+  {
+    "id": 1,
+    "mascotaId": 8,
+    "fecha": "2026-07-26",
+    "hora": "14:00",
+    "motivo": "Cirugía menor",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 2,
+    "mascotaId": 22,
+    "fecha": "2026-07-12",
+    "hora": "13:00",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 3,
+    "mascotaId": 22,
+    "fecha": "2026-02-21",
+    "hora": "17:15",
+    "motivo": "Chequeo general",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Urgente"
+  },
+  {
+    "id": 4,
+    "mascotaId": 4,
+    "fecha": "2026-04-07",
+    "hora": "10:15",
+    "motivo": "Radiografía",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Completada"
+  },
+  {
+    "id": 5,
+    "mascotaId": 6,
+    "fecha": "2026-04-15",
+    "hora": "11:00",
+    "motivo": "Vacunación",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 6,
+    "mascotaId": 4,
+    "fecha": "2026-01-21",
+    "hora": "08:00",
+    "motivo": "Vacunación",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 7,
+    "mascotaId": 14,
+    "fecha": "2026-04-16",
+    "hora": "14:00",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 8,
+    "mascotaId": 13,
+    "fecha": "2026-05-13",
+    "hora": "08:00",
+    "motivo": "Radiografía",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Completada"
+  },
+  {
+    "id": 9,
+    "mascotaId": 23,
+    "fecha": "2026-08-22",
+    "hora": "15:30",
+    "motivo": "Desparasitación",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Urgente"
+  },
+  {
+    "id": 10,
+    "mascotaId": 7,
+    "fecha": "2026-01-19",
+    "hora": "08:00",
+    "motivo": "Control de peso",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 11,
+    "mascotaId": 19,
+    "fecha": "2026-03-17",
+    "hora": "14:00",
+    "motivo": "Chequeo general",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 12,
+    "mascotaId": 3,
+    "fecha": "2026-04-03",
+    "hora": "16:45",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 13,
+    "mascotaId": 8,
+    "fecha": "2026-01-20",
+    "hora": "16:45",
+    "motivo": "Vacunación",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 14,
+    "mascotaId": 19,
+    "fecha": "2026-05-11",
+    "hora": "15:30",
+    "motivo": "Cirugía menor",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 15,
+    "mascotaId": 9,
+    "fecha": "2026-05-05",
+    "hora": "13:00",
+    "motivo": "Radiografía",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 16,
+    "mascotaId": 1,
+    "fecha": "2026-02-20",
+    "hora": "14:00",
+    "motivo": "Vacunación",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 17,
+    "mascotaId": 9,
+    "fecha": "2026-02-12",
+    "hora": "09:30",
+    "motivo": "Cirugía menor",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Urgente"
+  },
+  {
+    "id": 18,
+    "mascotaId": 6,
+    "fecha": "2026-05-27",
+    "hora": "14:00",
+    "motivo": "Chequeo general",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 19,
+    "mascotaId": 5,
+    "fecha": "2026-02-04",
+    "hora": "11:00",
+    "motivo": "Desparasitación",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Urgente"
+  },
+  {
+    "id": 20,
+    "mascotaId": 20,
+    "fecha": "2026-06-23",
+    "hora": "10:15",
+    "motivo": "Cirugía menor",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 21,
+    "mascotaId": 16,
+    "fecha": "2026-01-28",
+    "hora": "11:00",
+    "motivo": "Vacunación",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Urgente"
+  },
+  {
+    "id": 22,
+    "mascotaId": 2,
+    "fecha": "2026-03-11",
+    "hora": "08:00",
+    "motivo": "Emergencia",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Completada"
+  },
+  {
+    "id": 23,
+    "mascotaId": 18,
+    "fecha": "2026-01-18",
+    "hora": "13:00",
+    "motivo": "Vacunación",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 24,
+    "mascotaId": 18,
+    "fecha": "2026-06-27",
+    "hora": "08:00",
+    "motivo": "Desparasitación",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 25,
+    "mascotaId": 2,
+    "fecha": "2026-01-12",
+    "hora": "11:00",
+    "motivo": "Control de peso",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 26,
+    "mascotaId": 22,
+    "fecha": "2026-07-12",
+    "hora": "09:00",
+    "motivo": "Desparasitación",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 27,
+    "mascotaId": 6,
+    "fecha": "2026-03-01",
+    "hora": "13:00",
+    "motivo": "Control de peso",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 28,
+    "mascotaId": 9,
+    "fecha": "2026-02-26",
+    "hora": "09:30",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Completada"
+  },
+  {
+    "id": 29,
+    "mascotaId": 8,
+    "fecha": "2026-08-27",
+    "hora": "10:15",
+    "motivo": "Control de peso",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 30,
+    "mascotaId": 8,
+    "fecha": "2026-04-22",
+    "hora": "08:00",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Urgente"
+  },
+  {
+    "id": 31,
+    "mascotaId": 3,
+    "fecha": "2026-07-12",
+    "hora": "11:00",
+    "motivo": "Control de peso",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 32,
+    "mascotaId": 9,
+    "fecha": "2026-05-19",
+    "hora": "09:30",
+    "motivo": "Chequeo general",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 33,
+    "mascotaId": 14,
+    "fecha": "2026-06-24",
+    "hora": "11:30",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Completada"
+  },
+  {
+    "id": 34,
+    "mascotaId": 19,
+    "fecha": "2026-01-09",
+    "hora": "10:15",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 35,
+    "mascotaId": 18,
+    "fecha": "2026-04-24",
+    "hora": "17:15",
+    "motivo": "Control de peso",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 36,
+    "mascotaId": 22,
+    "fecha": "2026-06-20",
+    "hora": "11:30",
+    "motivo": "Vacunación",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 37,
+    "mascotaId": 10,
+    "fecha": "2026-06-14",
+    "hora": "17:15",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 38,
+    "mascotaId": 5,
+    "fecha": "2026-07-14",
+    "hora": "10:15",
+    "motivo": "Desparasitación",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Completada"
+  },
+  {
+    "id": 39,
+    "mascotaId": 18,
+    "fecha": "2026-05-10",
+    "hora": "08:00",
+    "motivo": "Cirugía menor",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 40,
+    "mascotaId": 20,
+    "fecha": "2026-08-11",
+    "hora": "17:15",
+    "motivo": "Radiografía",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 41,
+    "mascotaId": 17,
+    "fecha": "2026-03-26",
+    "hora": "14:00",
+    "motivo": "Vacunación",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 42,
+    "mascotaId": 22,
+    "fecha": "2026-06-20",
+    "hora": "17:15",
+    "motivo": "Vacunación",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Urgente"
+  },
+  {
+    "id": 43,
+    "mascotaId": 8,
+    "fecha": "2026-01-05",
+    "hora": "10:15",
+    "motivo": "Chequeo general",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Completada"
+  },
+  {
+    "id": 44,
+    "mascotaId": 20,
+    "fecha": "2026-07-15",
+    "hora": "09:00",
+    "motivo": "Cirugía menor",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Completada"
+  },
+  {
+    "id": 45,
+    "mascotaId": 13,
+    "fecha": "2026-01-05",
+    "hora": "10:15",
+    "motivo": "Vacunación",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 46,
+    "mascotaId": 6,
+    "fecha": "2026-01-15",
+    "hora": "15:30",
+    "motivo": "Cirugía menor",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Completada"
+  },
+  {
+    "id": 47,
+    "mascotaId": 5,
+    "fecha": "2026-06-22",
+    "hora": "14:00",
+    "motivo": "Radiografía",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 48,
+    "mascotaId": 15,
+    "fecha": "2026-08-24",
+    "hora": "09:30",
+    "motivo": "Radiografía",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 49,
+    "mascotaId": 21,
+    "fecha": "2026-08-25",
+    "hora": "11:00",
+    "motivo": "Cirugía menor",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Completada"
+  },
+  {
+    "id": 50,
+    "mascotaId": 3,
+    "fecha": "2026-05-08",
+    "hora": "11:00",
+    "motivo": "Control de peso",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 51,
+    "mascotaId": 3,
+    "fecha": "2026-04-05",
+    "hora": "09:30",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 52,
+    "mascotaId": 3,
+    "fecha": "2026-06-14",
+    "hora": "13:00",
+    "motivo": "Radiografía",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 53,
+    "mascotaId": 7,
+    "fecha": "2026-01-13",
+    "hora": "13:00",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 54,
+    "mascotaId": 12,
+    "fecha": "2026-07-25",
+    "hora": "11:00",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Completada"
+  },
+  {
+    "id": 55,
+    "mascotaId": 8,
+    "fecha": "2026-08-14",
+    "hora": "11:00",
+    "motivo": "Chequeo general",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Urgente"
+  },
+  {
+    "id": 56,
+    "mascotaId": 22,
+    "fecha": "2026-07-26",
+    "hora": "17:15",
+    "motivo": "Desparasitación",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 57,
+    "mascotaId": 20,
+    "fecha": "2026-07-01",
+    "hora": "15:30",
+    "motivo": "Chequeo general",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Completada"
+  },
+  {
+    "id": 58,
+    "mascotaId": 5,
+    "fecha": "2026-01-06",
+    "hora": "14:00",
+    "motivo": "Emergencia",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Urgente"
+  },
+  {
+    "id": 59,
+    "mascotaId": 7,
+    "fecha": "2026-06-11",
+    "hora": "14:00",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Completada"
+  },
+  {
+    "id": 60,
+    "mascotaId": 9,
+    "fecha": "2026-01-16",
+    "hora": "09:00",
+    "motivo": "Chequeo general",
+    "veterinario": "Dra. Fernanda Ríos",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 61,
+    "mascotaId": 21,
+    "fecha": "2026-01-25",
+    "hora": "09:00",
+    "motivo": "Chequeo general",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 62,
+    "mascotaId": 1,
+    "fecha": "2026-04-05",
+    "hora": "16:45",
+    "motivo": "Desparasitación",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 63,
+    "mascotaId": 19,
+    "fecha": "2026-05-15",
+    "hora": "10:15",
+    "motivo": "Control de peso",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 64,
+    "mascotaId": 20,
+    "fecha": "2026-03-25",
+    "hora": "09:00",
+    "motivo": "Emergencia",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 65,
+    "mascotaId": 1,
+    "fecha": "2026-07-19",
+    "hora": "11:00",
+    "motivo": "Limpieza dental",
+    "veterinario": "Dr. Marcos Vidal",
+    "estado": "Confirmada"
+  },
+  {
+    "id": 66,
+    "mascotaId": 19,
+    "fecha": "2026-02-08",
+    "hora": "17:15",
+    "motivo": "Emergencia",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 67,
+    "mascotaId": 2,
+    "fecha": "2026-07-18",
+    "hora": "11:30",
+    "motivo": "Control de peso",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Cancelada"
+  },
+  {
+    "id": 68,
+    "mascotaId": 21,
+    "fecha": "2026-07-01",
+    "hora": "11:30",
+    "motivo": "Radiografía",
+    "veterinario": "Dra. Elena Rostova",
+    "estado": "Completada"
+  },
+  {
+    "id": 69,
+    "mascotaId": 12,
+    "fecha": "2026-08-27",
+    "hora": "17:15",
+    "motivo": "Desparasitación",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 70,
+    "mascotaId": 24,
+    "fecha": "2026-05-21",
+    "hora": "15:30",
+    "motivo": "Radiografía",
+    "veterinario": "Dr. Iván Suárez",
+    "estado": "Completada"
+  }
+]

@@ -1,0 +1,504 @@
+/* ============================================================
+   general.css - PetPals
+   Estilos base compartidos por todas las páginas del sitio.
+   Autor: Uribe Jair
+   ============================================================ */
+
+/* ============================================================
+   BLOQUE 1: RESET Y BODY
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f0;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   BLOQUE 2: HEADER
+   Mobile-first: valores base pensados para pantallas pequeñas.
+   ============================================================ */
+header {
+    background-color: #1b5e20;
+    color: #ffffff;
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 4px solid #81c784;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+header p {
+    font-size: 0.85rem;
+    color: #c8e6c9;
+    font-style: italic;
+}
+
+/* Tablet en adelante: el header recupera más aire */
+@media (min-width: 768px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Escritorio: tamaño final del título */
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ============================================================
+   BLOQUE 3: NAV
+   Mobile-first: en pantallas pequeñas el menú se acomoda en
+   columna y cada enlace ocupa todo el ancho disponible.
+   Compatible con el componente Navbar de Bootstrap.
+   ============================================================ */
+nav {
+    background-color: #2e7d32;
+    padding: 10px;
+}
+
+nav .navbar-toggler {
+    border-color: #c8e6c9;
+    margin-bottom: 6px;
+}
+
+nav .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+nav .navbar-collapse.show,
+nav .navbar-collapse.collapsing {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #1b5e20;
+    color: #a5d6a7;
+}
+
+/* Tablet en adelante: el menú se acomoda en fila */
+@media (min-width: 768px) {
+    nav .navbar-toggler {
+        display: none;
+    }
+
+    nav .navbar-collapse {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+        display: flex !important;
+    }
+
+    nav a {
+        width: auto;
+        text-align: left;
+    }
+}
+
+/* ============================================================
+   BLOQUE 4: MAIN Y SECTION
+   Mobile-first: el contenido ocupa casi todo el ancho y el
+   padding es reducido en pantallas pequeñas.
+   ============================================================ */
+main {
+    width: 95%;
+    max-width: 960px;
+    margin: 16px auto;
+    padding: 0;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+article {
+    border: 1px solid #c8e6c9;
+    border-radius: 6px;
+    padding: 14px;
+    margin-bottom: 16px;
+    background-color: #f9fbe7;
+}
+
+aside {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 14px 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+/* Tablet en adelante: más aire en el contenido */
+@media (min-width: 768px) {
+    main {
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    article {
+        padding: 16px;
+    }
+
+    aside {
+        padding: 16px 20px;
+    }
+}
+
+/* ============================================================
+   BLOQUE 5: TIPOGRAFÍA
+   Mobile-first: tamaños base para pantallas pequeñas.
+   ============================================================ */
+h1 {
+    font-size: 1.4rem;
+    color: #1b5e20;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #2e7d32;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #a5d6a7;
+    padding-bottom: 6px;
+}
+
+h3 {
+    font-size: 1.05rem;
+    color: #388e3c;
+    margin: 14px 0 8px;
+}
+
+p {
+    margin-bottom: 12px;
+    color: #2c2c2c;
+}
+
+a {
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1b5e20;
+}
+
+/* Tablet en adelante: tipografía a tamaño completo */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================================
+   BLOQUE 6: IMÁGENES Y FIGURAS
+   ============================================================ */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+figure {
+    margin: 16px 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #555555;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* ============================================================
+   BLOQUE 7: FORMULARIOS
+   ============================================================ */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+label {
+    font-weight: 600;
+    color: #1b5e20;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+    display: block;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #a5d6a7;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #f9fbe7;
+    color: #1a1a1a;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+    background-color: #ffffff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* ============================================================
+   BLOQUE 8: BOTONES
+   ============================================================ */
+button {
+    background-color: #1b5e20;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 11px 24px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #2e7d32;
+    transform: translateY(-1px);
+}
+
+button.secondary {
+    background-color: #757575;
+}
+
+button.secondary:hover {
+    background-color: #616161;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.form-actions button {
+    flex: 1;
+}
+
+/* ============================================================
+   BLOQUE 9: TABLAS
+   ============================================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #1b5e20;
+    color: #ffffff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f8e9;
+}
+
+tr:hover td {
+    background-color: #e8f5e9;
+}
+
+/* ============================================================
+   BLOQUE 10: CLASES DE ESTADO (reutilizables en todo el sitio)
+   ============================================================ */
+.status-ok {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.status-pending {
+    color: #e65100;
+    font-weight: 600;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    cursor: pointer;
+    color: #2c2c2c;
+}
+
+/* ============================================================
+   BLOQUE 10.1: UTILIDADES (reemplazan estilos inline)
+   ============================================================ */
+.mt-sm {
+    margin-top: 12px;
+}
+
+.mt-md {
+    margin-top: 20px;
+}
+
+.mt-lg {
+    margin-top: 28px;
+}
+
+.texto-alerta {
+    color: #c62828;
+}
+
+.fieldset-registro {
+    border: 1px solid #c8e6c9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.fieldset-registro legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.figura-flexible {
+    flex: 2 1 300px;
+    margin: 0;
+}
+
+.imagen-completa {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ============================================================
+   BLOQUE 11: MULTIMEDIA
+   ============================================================ */
+audio,
+video,
+iframe {
+    max-width: 100%;
+    border-radius: 6px;
+    display: block;
+    margin: 12px auto;
+}
+
+/* ============================================================
+   BLOQUE 12: FOOTER
+   ============================================================ */
+footer {
+    background-color: #1b5e20;
+    color: #c8e6c9;
+    text-align: center;
+    padding: 18px 20px;
+    font-size: 0.88rem;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #c8e6c9;
+    margin-bottom: 4px;
+}
+/* ============================================================
+   BLOQUE 17: REFUERZO MOBILE-FIRST
+   Las reglas base de este archivo ya están pensadas para
+   pantallas pequeñas (mobile-first). Aquí solo se ajustan
+   detalles puntuales que aplican exclusivamente en celulares.
+   ============================================================ */
+@media (max-width: 575.98px) {
+
+    /* Las tablas se ven más cómodas con texto reducido en celular */
+    table {
+        font-size: 13px;
+    }
+
+    /* Los inputs deben verse con un tamaño de fuente legible (evita zoom automático en iOS) */
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 16px;
+    }
+}

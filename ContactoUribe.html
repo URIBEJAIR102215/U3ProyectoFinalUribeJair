@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPals - Información de Contacto</title>
+    <link rel="icon" href="img/salud.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/Contacto.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-paw"></i> PetPals</h1>
+        <p>Canales Oficiales de Atención y Soporte</p>
+    </header>
+
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <a href="RegistroUribe.html"><i class="fa-solid fa-user-plus"></i> Registro de Usuario</a>
+                <a href="VistaVeterinario.html"><i class="fa-solid fa-user-doctor"></i> Vista Veterinario</a>
+                <a href="VistaUsuario.html"><i class="fa-solid fa-user"></i> Vista Usuario</a>
+                <a href="LoginUribe.html"><i class="fa-solid fa-power-off"></i> Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="info-contacto">
+            <h2><i class="fa-solid fa-envelope-open-text"></i> Información de Atención</h2>
+            <p>
+                Distinguida clientela, para nosotros es un placer atender a sus consentidos.
+                Ponemos a su disposición nuestros canales oficiales de comunicación para consultas informativas.
+            </p>
+
+            <!-- TARJETAS DE CONTACTO — GRID DE 3 COLUMNAS -->
+            <div class="grid-contacto">
+
+                <div class="tarjeta-contacto">
+                    <span class="icono-contacto"><i class="fa-solid fa-phone"></i></span>
+                    <h3>Teléfonos</h3>
+                    <p>0986102215</p>
+                    <p>(02) 2722-246</p>
+                </div>
+
+                <div class="tarjeta-contacto">
+                    <span class="icono-contacto"><i class="fa-solid fa-envelope"></i></span>
+                    <h3>Correo Electrónico</h3>
+                    <p>jouribe@espe.edu.ec</p>
+                    <p>admin@espe.edu.ec</p>
+                </div>
+
+                <div class="tarjeta-contacto">
+                    <span class="icono-contacto"><i class="fa-solid fa-clock"></i></span>
+                    <h3>Horario de Atención</h3>
+                    <p>Lun – Vie: 08:00 a 18:00</p>
+                    <p>Sábados: 09:00 a 14:00</p>
+                </div>
+
+            </div>
+
+            <p class="nota">
+                <i class="fa-solid fa-circle-info"></i>
+                Para emergencias fuera del horario regular, comunícate al número móvil 0986102215.
+            </p>
+        </section>
+
+        <!-- UBICACIÓN — FLEXBOX (mapa + texto lado a lado) -->
+        <section>
+            <h2><i class="fa-solid fa-map-location-dot"></i> Nuestra Ubicación</h2>
+            <p>Santo Domingo — Vía Camino Sin Fin km 5.999</p>
+
+            <div id="mapa-seccion">
+                 <div class="info-ubicacion">
+                    <h3><i class="fa-solid fa-location-dot"></i> Cómo llegar</h3>
+                    <p>Desde el centro de Santo Domingo, tomar la Vía Quito hasta el km 5.999 por el Camino Sin Fin.</p>
+                    <p>Contamos con parqueadero propio sin costo.</p>
+                    <p><i class="fa-solid fa-bus"></i> Bus urbano línea 5 — parada frente a la clínica.</p>
+                </div>
+                
+                <figure class="figura-flexible">
+                    <img src="img/center.jpg" alt="Mapa de ubicación del centro veterinario PetPals" class="imagen-completa">
+                    <figcaption>
+                        <a href="http://maps.google.com" target="_blank">
+                            Abrir en Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </figcaption>
+                </figure>
+
+               
+            </div>
+        </section>
+
+        <!-- PREGUNTAS FRECUENTES — ACORDEÓN (Bootstrap) -->
+        <section id="faq-contacto">
+            <h2><i class="fa-solid fa-circle-question"></i> Preguntas Frecuentes</h2>
+
+            <div class="accordion" id="acordeonFaq">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                            ¿Necesito cita previa para una consulta?
+                        </button>
+                    </h3>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#acordeonFaq">
+                        <div class="accordion-body">
+                            Se recomienda agendar la cita desde el panel de usuario para garantizar disponibilidad,
+                            aunque las urgencias son atendidas sin cita previa.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                            ¿Qué hago si es una emergencia fuera de horario?
+                        </button>
+                    </h3>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                        <div class="accordion-body">
+                            Puedes comunicarte directamente al número móvil de emergencias indicado en esta página,
+                            disponible para casos urgentes fuera del horario regular.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                            ¿Puedo ver el historial médico de mi mascota en línea?
+                        </button>
+                    </h3>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                        <div class="accordion-body">
+                            Sí, desde el panel de usuario puedes consultar el historial médico, las vacunas
+                            aplicadas y el estado de salud de cada mascota registrada.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                            ¿Cómo registro una nueva mascota?
+                        </button>
+                    </h3>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                        <div class="accordion-body">
+                            El registro de nuevas mascotas se realiza durante la primera consulta presencial,
+                            donde el veterinario crea el expediente correspondiente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>© PetPals 2026 - Proyecto Fundamentos Web</p>
+        <p>© Uribe Jair - Universidad de las Fuerzas Armadas ESPE</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

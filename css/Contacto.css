@@ -1,0 +1,180 @@
+/* ============================================================
+   contacto.css - PetPals
+   Estilos específicos de la página de contacto.
+   Autor: Uribe Jair
+   ============================================================ */
+
+/* ============================================================
+   BLOQUE 1: ENCABEZADO DE CONTACTO
+   ============================================================ */
+#info-contacto {
+    background-color: #f9f9f9;
+    border-left: 6px solid #2e7d32;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#info-contacto h2 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+/* ============================================================
+   BLOQUE 2: TARJETAS DE CONTACTO — GRID
+   Cada canal de atención como tarjeta en cuadrícula.
+   ============================================================ */
+.grid-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* Tablet: dos columnas */
+@media (min-width: 576px) {
+    .grid-contacto {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Escritorio: tres columnas, una por canal de atención */
+@media (min-width: 992px) {
+    .grid-contacto {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tarjeta-contacto {
+    background-color: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-contacto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.tarjeta-contacto .icono-contacto {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.tarjeta-contacto h3 {
+    color: #1b5e20;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.tarjeta-contacto p {
+    font-size: 0.9rem;
+    color: #444;
+    margin: 0;
+}
+
+/* ============================================================
+   BLOQUE 3: TABLA DE CANALES (mantiene la tabla original)
+   ============================================================ */
+.tabla-contacto {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.tabla-contacto th {
+    background-color: #2e7d32;
+    color: #ffffff;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.tabla-contacto td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #dddddd;
+    vertical-align: top;
+}
+
+.tabla-contacto tr:hover td {
+    background-color: #f1f8e9;
+}
+
+/* ============================================================
+   BLOQUE 4: NOTA INFORMATIVA
+   ============================================================ */
+.nota {
+    background-color: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: #333333;
+    margin-top: 20px;
+}
+
+/* ============================================================
+   BLOQUE 5: SECCIÓN DE MAPA — FLEX
+   Mobile-first: imagen y texto apilados en columna; en pantallas
+   más anchas se acomodan lado a lado.
+   ============================================================ */
+#mapa-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#mapa-seccion .figura-flexible img {
+    border-radius: 8px;
+    border: 2px solid #c8e6c9;
+}
+
+#mapa-seccion .info-ubicacion {
+    background-color: #f1f8e9;
+    border-radius: 8px;
+    padding: 18px;
+    border: 1px solid #c8e6c9;
+}
+
+@media (min-width: 768px) {
+    #mapa-seccion {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    #mapa-seccion .info-ubicacion {
+        flex: 1 1 200px;
+    }
+}
+
+/* ============================================================
+   BLOQUE 6: ACORDEÓN DE PREGUNTAS FRECUENTES (Bootstrap)
+   Personalización para que combine con la identidad visual.
+   ============================================================ */
+#faq-contacto .accordion-button {
+    color: #1b5e20;
+    font-weight: 600;
+    background-color: #f1f8e9;
+}
+
+#faq-contacto .accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: #2e7d32;
+}
+
+#faq-contacto .accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+}
+
+#faq-contacto .accordion-item {
+    border-color: #c8e6c9;
+}

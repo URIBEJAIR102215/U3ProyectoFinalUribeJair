@@ -1,0 +1,81 @@
+/* ============================================================
+   BLOQUE 1: SECCIÓN PRINCIPAL DE REGISTRO
+   Estilos propios de la página de creación de cuenta.
+   ============================================================ */
+
+#registro-principal {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #f9f9f9;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+#registro-principal h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ============================================================
+   BLOQUE 2: FORMULARIO DE REGISTRO
+   Estilos para los campos del formulario de nuevo usuario.
+   ============================================================ */
+
+.formulario-registro label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.formulario-registro input,
+.formulario-registro select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+}
+
+.formulario-registro input:focus,
+.formulario-registro select:focus {
+    border-color: #2e7d32;
+    outline: none;
+}
+
+/* ============================================================
+   BLOQUE 3: BOTÓN DE REGISTRO
+   Botón principal del formulario de registro.
+   ============================================================ */
+
+.btn-registrar {
+    width: 100%;
+    background-color: #2e7d32;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.btn-registrar:hover {
+    background-color: #1b5e20;
+}
+
+/* ============================================================
+   BLOQUE 4: NOTA DE AYUDA
+   Texto informativo debajo del formulario.
+   ============================================================ */
+
+.nota-registro {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #555555;
+}

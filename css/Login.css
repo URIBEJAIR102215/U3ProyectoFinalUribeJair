@@ -1,0 +1,124 @@
+/* ============================================================
+   BLOQUE 1: SECCIÓN PRINCIPAL DE LOGIN
+   Estilos propios de la página de inicio de sesión.
+   ============================================================ */
+
+#login-principal {
+    max-width: 450px;
+    margin: 30px auto;
+    background-color: #f9f9f9;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+#login-principal h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ============================================================
+   BLOQUE 2: GRUPOS DE CAMPOS
+   Espaciado entre cada campo del formulario.
+   ============================================================ */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #2e7d32;
+    outline: none;
+}
+
+/* ============================================================
+   BLOQUE 3: SELECTOR DE ROL
+   Estilo para los botones de radio de selección de rol.
+   ============================================================ */
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.radio-option:hover {
+    background-color: #e8f5e9;
+    border-color: #2e7d32;
+}
+
+/* ============================================================
+   BLOQUE 4: ENLACE DE REGISTRO
+   Texto de ayuda debajo del formulario.
+   ============================================================ */
+
+.enlace-registro {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+#carrusel-bienvenida {
+    max-width: 700px;
+    margin: 16px auto 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#carrusel-bienvenida .carousel-inner {
+    background-color: #1b5e20;
+}
+
+#carrusel-bienvenida .carousel-item img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+#carrusel-bienvenida .carousel-caption {
+    background-color: rgba(27, 94, 32, 0.65);
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+#carrusel-bienvenida .carousel-caption h5 {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    #carrusel-bienvenida .carousel-item img {
+        height: 400px !important;
+    }
+
+    #carrusel-bienvenida .carousel-caption h5 {
+        font-size: 1.25rem;
+    }
+}

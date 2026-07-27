@@ -1,0 +1,248 @@
+/* ============================================================
+   componentes.css - PetPals
+   Estilos de los componentes agregados en la etapa dinámica:
+   tarjetas generadas por JS, buscador, filtros, panel de
+   indicadores, gráfico, selector de país y widget de clima.
+   ============================================================ */
+
+/* -------- Ícono de especie dentro de la tarjeta -------- */
+.icono-especie {
+  width: 56px;
+  height: 56px;
+  float: right;
+  border-radius: 50%;
+  background-color: #f1f8e9;
+  padding: 6px;
+}
+
+.tarjeta-resaltada {
+  outline: 2px solid #81c784;
+}
+
+.acciones-tarjeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.acciones-tarjeta .btn-agendar {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}
+
+.btn-agendar.secondary {
+  background-color: #607d8b;
+}
+.btn-agendar.secondary:hover {
+  background-color: #455a64;
+}
+
+.btn-agendar.peligro {
+  background-color: #c62828;
+}
+.btn-agendar.peligro:hover {
+  background-color: #8e0000;
+}
+
+.sin-resultados {
+  padding: 16px;
+  background-color: #fff3e0;
+  border-left: 6px solid #ef6c00;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* -------- Barra de herramientas: buscador + filtros + orden -------- */
+.barra-herramientas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #c8e6c9;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .barra-herramientas {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: end;
+  }
+}
+
+.barra-herramientas label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #1b5e20;
+  font-size: 0.9rem;
+}
+
+.barra-herramientas input,
+.barra-herramientas select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #a5d6a7;
+  border-radius: 6px;
+}
+
+/* -------- Panel de indicadores -------- */
+.panel-indicadores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+}
+
+@media (min-width: 768px) {
+  .panel-indicadores {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.indicador-card {
+  background-color: #1b5e20;
+  color: #fff;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+
+.indicador-card span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.indicador-card p {
+  font-size: 0.75rem;
+  margin-top: 4px;
+  color: #c8e6c9;
+}
+
+/* -------- Contenedor del gráfico -------- */
+.contenedor-grafico {
+  background-color: #ffffff;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  max-width: 600px;
+}
+
+/* -------- Aviso de carga -------- */
+#aviso-carga {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  color: #1b5e20;
+  font-weight: 600;
+}
+
+/* -------- Formulario mascota (registro / edición) -------- */
+.formulario-mascota-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 768px) {
+  .formulario-mascota-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.formulario-mascota-grid .campo-ancho {
+  grid-column: 1 / -1;
+}
+
+/* -------- Fieldsets del formulario de registro -------- */
+.fieldset-registro {
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.fieldset-registro legend {
+  padding: 0 8px;
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+.fila-checkbox {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal !important;
+}
+
+.fila-checkbox input {
+  width: auto !important;
+  margin-bottom: 0 !important;
+}
+
+/* -------- Selector de país (registro) -------- */
+.selector-pais {
+  position: relative;
+}
+
+.lista-paises {
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid #a5d6a7;
+  border-radius: 6px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.opcion-pais {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.opcion-pais:hover {
+  background-color: #f1f8e9;
+}
+
+.opcion-pais img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.sin-resultado-pais {
+  padding: 8px 12px;
+  color: #888;
+}
+
+/* -------- Widget de clima -------- */
+#panel-clima {
+  background-color: #e3f2fd;
+  border-left: 6px solid #1976d2;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+#panel-clima h2 {
+  color: #0d47a1;
+}
+
+#clima-resultado p {
+  margin: 4px 0;
+}
